@@ -20,8 +20,13 @@
             <td> {{user?.avatar}} </td>
             <td>
               <!-- <button mat-stroked-button color="accent" class="btn-block" >Edit</button>  -->
-              <a href="users/update/{{user.id}}">Edit</a>
-              <a (click)="deleteOneUser(user.id)">Delete</a>
+              <a href="users/update/{{user.id}}" >
+                <mat-icon aria-hidden="false" aria-label="create icon" >create</mat-icon>
+                Edit</a>
+
+              <a (click)="deleteOneUser(user.id)">
+                <mat-icon aria-hidden="false" aria-label="create icon" >delete</mat-icon>  
+                Delete</a>
         </td>
         </tr>
     </tbody>

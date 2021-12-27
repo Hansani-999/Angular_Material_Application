@@ -1,8 +1,11 @@
 html{
-    background-image: url('/src/assets/Images/image1.jpg');
-    background-size: contain;
+    background: url('../src/assets/Images/image4.jpg');
+    background-size: cover;
+    /* background-color: aquamarine; */
     /* height: 500px;
     width:500px;
      */
+     background-repeat: no-repeat;
+    
    
 }

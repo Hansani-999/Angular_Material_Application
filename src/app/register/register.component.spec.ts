@@ -22,4 +22,10 @@ describe('RegisterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return 0 if input is negative', () => {
+    const result = component.registerUsers(-1);
+    expect(result).toBe();
+  })
+
 });

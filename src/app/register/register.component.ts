@@ -19,11 +19,10 @@ users:any;
     // });
    }
 
-   registerUsers(data:any){
-    
+   registerUsers(data:any){    
       console.warn(data)
       this._userService.postUsers(data).subscribe((result)=>{
-        console.warn(result)
+        console.warn('successfully registered',result)
       })
   }
 

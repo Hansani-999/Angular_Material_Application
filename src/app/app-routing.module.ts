@@ -5,16 +5,11 @@ import { RegisterComponent } from './register/register.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 
 const routes: Routes = [
-  { path: 'users',
-  children:[
-
-    { path: 'register', component: RegisterComponent },
-    { path: 'update/:id', component: UpdateUserComponent },
-    { path: 'listusers', component: ListUserComponent },
-  ]
-
-},
- 
+  { path: '',pathMatch: 'full', redirectTo: 'users/register'},
+    { path: 'users/register', component: RegisterComponent },
+    { path: 'users/update/:id', component: UpdateUserComponent },
+    { path: 'users/listusers', component: ListUserComponent },
+  
 ];
 
 @NgModule({
