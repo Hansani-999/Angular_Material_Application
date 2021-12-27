@@ -1,0 +1,32 @@
+
+
+<div class="login-wrapper" >
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header> 
+  
+       <form  #userPost="ngForm" (ngSubmit)="registerUsers(userPost.value)" class="example-form">
+  
+        <mat-card-content>
+
+            <mat-form-field class="example-full-width" >
+                 <input  type = "text" name = "first_name"  ngModel  style="background-color: rgb(55, 56, 54);" matInput placeholder="First Name" >
+              </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input type = "text" name = "last_name"  ngModel style="background-color: rgb(55, 56, 54);" matInput placeholder="Last Name">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" >
+            <input  type = "text" name = "email" ngModel  style="background-color: rgb(55, 56, 54);" matInput placeholder="Email" >
+         </mat-form-field>
+  
+        </mat-card-content>
+  
+        <button mat-stroked-button color="accent" type = "submit" class="btn-block">Register</button>
+  
+      </form>
+    </mat-card>
+  </div>
+  

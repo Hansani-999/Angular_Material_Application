@@ -1,0 +1,47 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+   <mat-icon>menu</mat-icon>
+ </button>
+ <span>My App</span>
+ <span class="example-spacer"></span>
+ <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+   <mat-icon>favorite</mat-icon>
+ </button>
+ <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <mat-icon>share</mat-icon>
+</button>
+</mat-toolbar>
+
+<div class="login-wrapper" >
+  
+  <mat-card class="box">
+    <span class="material-icons">perm_identity</span>
+
+    <mat-card-header>
+      <mat-card-title>User Profile</mat-card-title>
+    </mat-card-header> 
+
+     <form  #userUpdate ="ngForm" (ngSubmit)="updateUsers(userUpdate.value)"  class="example-form" >
+
+      <mat-card-content >
+        
+
+          <mat-form-field class="example-full-width" >
+               <input  type = "text" name = "first_name"  style="background-color: rgb(55, 56, 54);" matInput placeholder="First Name" [(ngModel)]="userList && userList[0].first_name" >
+            </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type = "text" name = "last_name"  style="background-color: rgb(55, 56, 54);" matInput placeholder="Last Name" [(ngModel)]="userList && userList[0].last_name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" >
+          <input  type = "text" name = "email"  style="background-color: rgb(55, 56, 54);" matInput placeholder="Email" [(ngModel)]="userList && userList[0].email">
+       </mat-form-field>
+
+      </mat-card-content>
+
+      <button mat-stroked-button color="accent" class="btn-block">Update Profile</button>
+
+    </form>
+  </mat-card>
+</div>
